@@ -1,7 +1,15 @@
-# Seraphina — Fortnite style (v6)
+# Seraphina — Fortnite style (v7)
 
 Play: https://nasoteisoy.github.io/seraphina-fortnite/ (works on phone)
-Older: v5 https://nasoteisoy.github.io/seraphina-fortnite/v5/ · v4 https://nasoteisoy.github.io/seraphina-fortnite/v4/ · v3 https://nasoteisoy.github.io/seraphina-fortnite/v3/ · v2 https://nasoteisoy.github.io/seraphina-fortnite/v2/
+Older: v6 https://nasoteisoy.github.io/seraphina-fortnite/v6/ · v5 https://nasoteisoy.github.io/seraphina-fortnite/v5/ · v4 https://nasoteisoy.github.io/seraphina-fortnite/v4/ · v3 https://nasoteisoy.github.io/seraphina-fortnite/v3/ · v2 https://nasoteisoy.github.io/seraphina-fortnite/v2/
+
+v7:
+- Walk is the v5 walk again (same animation), just played ~1.32× faster: ~2.0 m/s, feet matched to the stride (v6's long-stride walk clip is gone).
+- Dagger combo rebuilt: every move now has a wind-up, a hit on the real swing frame, and a recovery, and chains into the next move with a smooth blend (no idle pose flashing between moves).
+  cross = right-then-left double chop · spin = real 360° turn with stepping feet · dash = short hop forward on the thrust · leap X = lower leap (her jump was 1.3 m + an extra hop), eased slow-mo, slam.
+- Combo order is fixed: cross → spin → dash → leap X → cross… every tap during a move is remembered; it only starts over after you stop for a moment.
+- No more leg/head pops at the end of moves (feet now ease off when they lift, head/foot fixes no longer pile up on a move's last frame).
+- Everything from v6 kept (bow on her back, single jump, roll ends planted, normal stance, hair/cape, finger grips, fists, crouch).
 
 v6:
 - Stowed bow stays locked to her back in idle / walk / run / sneak / jump / roll (it used to lag behind her when moving); smaller and more upright so the tips stay inside her back/cape silhouette. The bow in her hand (bow mode) is unchanged.
