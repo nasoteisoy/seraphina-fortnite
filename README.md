@@ -1,7 +1,14 @@
-# Seraphina — Fortnite style (v5)
+# Seraphina — Fortnite style (v6)
 
 Play: https://nasoteisoy.github.io/seraphina-fortnite/ (works on phone)
-Older: v4 https://nasoteisoy.github.io/seraphina-fortnite/v4/ · v3 https://nasoteisoy.github.io/seraphina-fortnite/v3/ · v2 https://nasoteisoy.github.io/seraphina-fortnite/v2/
+Older: v5 https://nasoteisoy.github.io/seraphina-fortnite/v5/ · v4 https://nasoteisoy.github.io/seraphina-fortnite/v4/ · v3 https://nasoteisoy.github.io/seraphina-fortnite/v3/ · v2 https://nasoteisoy.github.io/seraphina-fortnite/v2/
+
+v6:
+- Stowed bow stays locked to her back in idle / walk / run / sneak / jump / roll (it used to lag behind her when moving); smaller and more upright so the tips stay inside her back/cape silhouette. The bow in her hand (bow mode) is unchanged.
+- Normal stance kept (relaxed idle, no boxing guard).
+- Faster walk: ~2.1 m/s (was 1.55) with a longer-stride walk clip so the feet still match the ground.
+- One jump per press: the crouch-and-spring take-off clip that played in mid-air (looked like a 2nd jump) is gone; no re-jump until she lands and the button is released.
+- Roll no longer slides out at the end: her speed follows her planted feet and is zero when she stands up.
 
 v5:
 - Head level: she looks at the horizon in idle / walk / run (was 12–21° down).
