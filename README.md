@@ -16,6 +16,10 @@ v5:
 Phone: left stick to move (push far = run), icon buttons: 🤸 roll, 🦶 kick, ⬆️ jump, 🧎 crouch, 🔄 switch, attack.
 Desktop: WASD move, Shift run, Space jump, F/click attack, X/Tab switch (B bow · J daggers · U fists), K kick, C/Ctrl crouch, R roll.
 
+![sheet](sheet.png)
+
+Dagger combo: [motion.gif](motion.gif) · v4 sheet/gif kept in [v4/](v4/)
+
 ---
 
 # Seraphina — Fortnite style (v4)
