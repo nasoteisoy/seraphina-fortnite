@@ -16,3 +16,6 @@ Rules: v9 face approved (do not change face), never delete, no Meshy, no BotCamp
 ## 08:59 MST — step 2: sword code (web/src/_tail.js; v9 copy kept as _tail_v9.js)
 - swordWant(): sword is in the hand whenever weapon==='sword' (v9 only drew it during the combo + 0.9 s, sheathed it when walking/running/jumping/crouching → "doesn't hold it when equipped"). Sheathes only when switching to fists.
 - switchChar: arrives with it in hand (SWD.u=1). SWGRIP.a tunable slide along the grip. ALARIC_URL → v10 GLB, title v10, build.py paths fixed to v10. Serving on :8820.
+## 09:17 MST — step 2 tests (test/sword10.py → shots/sword/v10.json, v10s_*.png; test/legshot10.py → shots/legs/v10_*, g_v10_*.png)
+- Sword in hand (h=1, grip centre locked to the hand frame, 0 cm / 0° offset by construction, finger pose 'grip') in idle, walk, run, jump(+land), roll, crouch, crouch-walk, all 4 combo steps, kick, wave. Middle finger joints sit 2.5–3.6 cm from the grip axis (grip half-thickness ~1.5 cm + finger thickness), along-grip −3.7..+3.8 cm (grip is ±9.5 cm) → hand fully on the navy grip, guard above, pommel below. Switch to fists: 1 sheathe, back to sword: 1 draw. No page errors.
+- Legs in game: thigh backs solid in all 8 angles × idle/walk/run/attack/jump; no black slabs between the legs.
