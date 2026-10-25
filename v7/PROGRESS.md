@@ -27,3 +27,5 @@ What was weird: (1) cross used Dualwield_Slice whose real slash is a backward ho
 - 5:02 PM — LIVE walk phone 390x844: v5 /v5/ 1.55 m/s cycle .697 s slide L25.0/R22.9 abs = 12.5 cm/m; v7 / 2.00 m/s cycle .530 s (timeScale 2.581 = 1.32x v5) slide L31.0/R23.8 = 11.1 cm/m (less slide per meter than v5). Both ual_Walk_Loop. 0 page errors.
 - 5:05 PM — LIVE combo phone 390x844 (real #atk taps): seq cross>spin>dash>xfinish, planted slide L0.2/R8.3 cm (spin pivot 6.9), root travel 1.58 m, slow-mo 1, 0 errors. Frames shots/motion/LC7_00..39.
 - 5:06 PM — built sheet.png (2612x1600: v5 vs v7 walk 16 frames each + 16-frame live combo strip + numbers) and motion.gif (72 frames: v7 walk x2 + full combo).
+- 5:06 PM — pushed repo 0828474 (root sheet.png + motion.gif = v7; new /v7/ folder: index, sheet, gif, PROGRESS). Next: PC copy + live MD5.
+- 5:07 PM — LIVE MD5 all match + 200: / & /index & /v7/ e0349e61, sheet 900ff41f, gif 6762a3f8, /v6/ 9afcba5a, /v5/ 16c11837, /v4/ 3dd64309, /v3/ f42ecee1, /v2/ 6be881a6, glb 72818e74. Added v7/glb copy (so /v7/ loads). PC copy: index, sheet, gif, README, glb sent to fortnite_v7.
