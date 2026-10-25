@@ -24,3 +24,4 @@ Rules: never delete, no Meshy (credits 2642 untouched), no BotCampus, no self-PA
 - Local (8819) live8 Alaric 390x844 touch: switch both ways OK, sword combo diag/back/thrust/cleave, walk 13.3 cm/m (v8 local 12.1, v8 live 14.3), run 0.2, crouch 33.0 (v8 30.5–33.7), 0 page errors.
 - In-game close-ups test/faceshot9.py → shots/face/cmp_full.png (v8 | v9 front, v8 | v9 3/4): shorter chin + smirk read at phone size.
 - 23:46 MST — step 5: early push (v9/ + root index + glb/alaric_fortnite_v9.glb; v8/ untouched, nothing deleted).
+- 23:47 MST — face/face_compare.png (sheet | v8 | v9, front / 3/4 / in-game + numbers) and out/sheet_v9.png (face strip on top of the v8 sheet) → repo root sheet.png + v9/sheet.png + v9/face_compare.png; v8/sheet.png untouched. motion.gif unchanged (body motion identical; v9/motion.gif = v8 copy).
