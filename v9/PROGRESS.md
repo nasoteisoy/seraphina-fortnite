@@ -25,3 +25,10 @@ Rules: never delete, no Meshy (credits 2642 untouched), no BotCampus, no self-PA
 - In-game close-ups test/faceshot9.py → shots/face/cmp_full.png (v8 | v9 front, v8 | v9 3/4): shorter chin + smirk read at phone size.
 - 23:46 MST — step 5: early push (v9/ + root index + glb/alaric_fortnite_v9.glb; v8/ untouched, nothing deleted).
 - 23:47 MST — face/face_compare.png (sheet | v8 | v9, front / 3/4 / in-game + numbers) and out/sheet_v9.png (face strip on top of the v8 sheet) → repo root sheet.png + v9/sheet.png + v9/face_compare.png; v8/sheet.png untouched. motion.gif unchanged (body motion identical; v9/motion.gif = v8 copy).
+
+## 23:56 MST — step 6: live verification (https://nasoteisoy.github.io/seraphina-fortnite/, Pages built 01e85d2)
+- Live MD5 = local: index.html/v9/index.html ba3fa95c…, glb/alaric_fortnite_v9.glb 6d28380b…, sheet.png 1d81978c…, v9/face_compare.png eaa2a0e5…; v8/index.html 42e68ad1… and v8/sheet.png 748b2c19… unchanged.
+- Live 390x844 touch, title "Seraphina & Alaric v9", 0 page errors. Alaric: switch both ways OK, combo diag/back/thrust/cleave, walk 11.8 cm/m (v8 live 14.3), run 0.4, crouch 33.1 (v8 33.7). Seraphina: combo cross/spin/dash/xfinish root 160 cm (v8 160), walk 11.6 (v8 11.8), crouch 30.7 (v8 30.3) → not regressed.
+- Live face close-ups: shots/face/live9_close.png, live9_q3.png (live9_pair.png) — shorter chin + left-corner smirk visible at phone size.
+- Meshy: NOT called (balance still 2642). A Meshy regen from a new smirk concept would cost ≈35 credits (image-to-3D 30 + auto-rig 5, same as v8) + the free rebuild pipeline (cloak/curls/fingers/scabbard re-fit) — only if Chumi asks.
+- PC copies: alaric\fortnite_v9\ (glb, blend, info, tex_base_v9.png, sheet.png, face_compare.png, face_v9.py, PROGRESS.md); seraphina\fortnite_v9\ (index.html, glb\alaric_fortnite_v9.glb, glb\seraphina_fortnite_v5.glb, PROGRESS.md). Not self-passed — Chumi judges.
