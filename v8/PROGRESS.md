@@ -30,12 +30,35 @@ Rules: never delete, Meshy only once, no self-PASS, no BotCampus, keep Seraphina
 
 - 2026-10-24 10:17 PM MST LIVE check #1 (Alaric, 390x844 touch, live root): switch both ways OK (alaric/sword -> sera/bow), sword combo diag>back>thrust>cleave, combo foot slide L0/R0.2 cm, root .31 m (lunges), walk 2.0 m/s 12.7 cm/m, run 5.0 m/s 0.5 cm/m, 1 jump, 0 errors. FOUND (frames shots/phone/al_walk_strip.png): big black slabs between his legs when striding + scabbard tip at shin height. Cause (weight-colour renders alaric/views/skirt/dom_grid.png): cloak weighting had grown into the dark-navy boots/shins (cloak bones on boot verts) + Meshy web faces welding cloak hem to the legs. Fix in tools/build_alaric.py (backup build_alaric_v8a.py): exclude boot/foot verts and near-shin verts below the hem from the cloak; remove the 427 thin web faces (0.106 m2) joining cloak- and leg-weighted verts (alaric/an/capesplit_lib.py cape_leg_unweld); scabbard throat 0.975->1.0 m, angle (.16,.34,-1)->(.14,.5,-1) so tip sits ~0.24 m up near the hem instead of the shin. Test renders alaric/views/skirt/e_grid.png: slabs gone. Now: full rebuild -> glb/alaric_fortnite_v8b.glb (old v8 glb kept).
 
-## 22:50 MST — v8b GLB wired in + scabbard sweep (local)
+## ~22:45 MST — v8b GLB wired in + scabbard sweep (local)
 - full_b rebuild OK: no Traceback, alaric_fortnite_v8b.glb 5.46 MB, 40 clips, cape verts 4838, cape_leg_unweld removed 427 web faces (0.106 m²), 1232 boot verts kept out of the cloak. Old v8 GLB kept.
 - Game now loads glb/alaric_fortnite_v8b.glb (build.py copies both).
 - Walk strip (shots/phone/al_walkb_strip.png): the black slabs between his legs are gone. Walk 2.0 m/s, 13.9 cm/m slide.
 - Scabbard tip was still 7–12 cm BELOW the cloak hem (tip .17–.24 m vs hem chain end .24–.34 m). Added a runtime 15° back-sweep of the Scabbard bone (about his side axis, re-applied after each mixer update, never stacked — some clips key that bone, some don't). Probe (test/scabprobe8.py, shots/scab/): idle tip .265 vs hem .228; walk tip .31–.35 vs hem .28–.36. Tried 8/12/22°: 22° stuck out behind the cloak, 12° still at hem.
 
-## 22:55 MST — local check of v8b + 15° sweep
+## ~22:48 MST — local check of v8b + 15° sweep
 - Picked the 15° sweep (best from the 0/8/12/15/22° probe). Default probe run (no override): idle tip .265 m vs hem .228; walk tip .31–.34 vs hem .28–.36.
 - close8 k3 combo frames (shots/k3_cb_grid.png): seq diag>back>thrust>cleave, no slabs, sword drawn for all 4 moves, errs [].
+
+## 22:50 MST — v8b PUSHED LIVE (commit 2f3dcaf, committed 22:49:59 MST)
+- Added glb/alaric_fortnite_v8b.glb + v8/glb/alaric_fortnite_v8b.glb, updated index.html (root) + v8/index.html + v8/PROGRESS.md. No deletions (old v8 GLB kept). Pages built 2f3dcaf; live MD5 = local for root, v8, both v8b GLBs, v7/index.html (e0349e61… unchanged).
+
+## 22:58 MST — LIVE check of v8b at 390x844 touch (github.io, commit 2f3dcaf)
+- Switch both ways via #charBtn tap: ok (alaric/sword → sera/bow, 2 switches), errs [].
+- Walk strip (shots/phone/LIVE_al_walk_strip.png): no black slabs between the legs. 2.0 m/s, 15.0 cm/m (walkcmp) / 14.3 cm/m (live8).
+- Scabbard (shots/scab/LIVE_strip.png): idle tip .265 m vs hem .241; walk tip .30–.36 vs hem .25–.38. Tip no longer at shin/ankle level. HONEST: it hangs on his left hip OUTSIDE the cloak side, so from behind the lower ~15 cm shows beside the cloak's left edge, and from the side it shows in front of the cloak — it is not hidden inside the cloak.
+- Combo (shots/LIVEk_cb_grid.png): diag>back>thrust>cleave, slide 0.1/0.2 cm, root 31 cm. Jump 0/0 drift, run-stop 0.1/0.8, run 5.19 m/s 0.3 cm/m, fist 0/1.1, roll 24.6/55.6 (same as v7 Seraphina), crouch walk 33.7 cm/m.
+- NEW flag: combo_holding_stick slide 24.5/20.6 cm (kk_Melee_1H clips) vs 11.3/0 pre-fix live — rerunning locally to see if it's noise.
+- (times on the last 4 headers corrected to the box clock; I had estimated them ahead)
+
+## 23:01 MST — holding-stick recheck + sheet.png / motion.gif
+- combo_holding_stick local rerun (v8b): 12.4/0 cm (kk_Melee_2H 6.7) — same band as the pre-fix live run (11.3/0). The 24.5/20.6 live figure varies with tap/stick timing; flagged, not a v8b regression.
+- out/sheet.png (2000x1836): ref sheet | concept r2 | live idle front/back; T-pose front/back/side (Blender, v8b GLB); 6 live walk frames; 9 live combo frames. out/motion.gif (300x522, 60 frames: 2x walk loop at 0.1x + combo at 0.3x, 4.6 MB).
+
+## 23:06 MST — Seraphina live regression check (v8b live, after switching to Alaric and back) vs v7 live
+- Same clips/seq: dagger combo root 160 cm both, seq cross>spin>dash>xfinish both; holding-stick 0/0 (v7 0/0); jump 0/0, 1 jump (same); run-stop 0.1/0.8 (v7 0/0.7); walk 11.8 cm/m (v7 13.5); run 0.6 (v7 0.3); fist 3.4/4.5 root 24 (v7 3.6/3.1 root 24) — the ~20 cm local fist figure was load noise; roll 24.6/50.3 (v7 24.6/55.1); crouch walk 30.3 cm/m (v7 30.4). errors [] both. No regression found.
+- Pre-existing (v7, unchanged on purpose): Seraphina Jump_Chop hit-stop knee pop (RightUpLeg ~25000 deg/s spike) — for Chumi to decide.
+
+## 23:07 MST — sheet/gif pushed + PC copies
+- Repo: root sheet.png/motion.gif now v8 (v7 originals still at v7/sheet.png, v7/motion.gif, MD5 900ff41f…/6762a3f8…), plus v8/sheet.png, v8/motion.gif, v8/PROGRESS.md. No deletions.
+- PC (bc245ee2): alaric\fortnite_v8\ = alaric_fortnite_v8b.glb/.blend/_info.json, alaric_fortnite_v8.glb (old), sheet.png, motion.gif, concept_r2.jpg, PROGRESS.md; seraphina\fortnite_v8\ = index.html, glb\(alaric v8b, alaric v8, seraphina v5), PROGRESS.md. MD5 checked below.
